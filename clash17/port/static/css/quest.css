@@ -1,0 +1,164 @@
+.form{
+	border: 1px solid black;
+	width: 60%;
+	margin-left: 250px;
+	margin-top: 100px;
+	height: 450px;
+	border-radius: 5px;
+}
+
+.fields{
+	font-size: 25px;
+}
+
+.button{
+	padding: 10px; 
+	width: 50%; 
+	font-size: 20px; 
+	border-radius: 5px;
+}
+
+#logout{
+	margin-left: 700px;
+	font-size: 20px;
+}
+
+a:hover{
+	text-decoration: none;
+}
+body {
+        padding-top: 50px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+    h1{
+text-align:center;
+font-family:'Quicksand',sans-serif;
+color:black;
+}
+h3{
+margin-left:5%;
+margin-top:22px;
+font-family:'Quicksand',sans-serif;
+color:#f44336;
+}
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-size: :30px;
+}
+.bar1{
+          height: 1px;
+          background-color: #f44336;
+        }
+
+table {
+    border-collapse: collapse;
+    font-family:'Quicksand',sans-serif;
+    font-size:18px;
+    width: 100%;
+    margin-top:-50px;
+    margin-left: none;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.1),
+    0px 10px 10px rgba(0,0,0,0.1),
+    0px 10px 10px rgba(0,0,0,0.1),
+    0px 5px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 15px;
+    font-family: 'Quicksand',sans-serif;
+    font-size: :30px;
+}
+th{
+background-color: rgb(20,20,20);
+color:rgb(0,206,209);
+font-family:'Quicksand',sans-serif;
+font-size: :30px;}
+
+tr{
+background-color: rgb(30,30,30);
+color: rgb(0,206,209);
+font-family: 'Quicksand',sans-serif;
+font-size: :30px;}
+}
+
+
+#quitBtn{
+    display: inline-block;
+    color:#f44336;
+    border:none;
+    height: 50px;
+    background-color: transparent;
+} 
+
+#quitbutton {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      color: gray;
+      text-align: center;
+      font-size: 17px;
+      padding: 10px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 3px;
+      font-size: 22px;
+    }
+    #quitbutton .span {
+       cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    #quitbutton .span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    #quitbutton:hover{color: white;}
+    #quitbutton:hover .span {
+      padding-right: 25px;
+      color: white;
+    }
+    #quitbutton:hover .span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    #questionh
+    {
+        padding-top: 4px;
+        background-color: transparent;
+        border: 0px;
+        font-size: 22px;
+    }
+    #leader
+    {
+        margin-top: 4px;
+        background-color: transparent;
+        border: 0px;
+        font-size: 22px;
+    }
+    .row2
+{
+  margin-top: 500px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding-top: 2px;
+  padding-left: 0px;
+  padding-right: 100px;
+  width: 100%;
+  height: 5%;
+  background-color: rgb(20,20,20);
+  margin-left: 0;
+  margin-right: 1000px;
+  
+ } 

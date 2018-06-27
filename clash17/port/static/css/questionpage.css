@@ -1,0 +1,13 @@
+.row{
+	border: 1px solid black;
+	padding: 1px;
+	margin-bottom: 50px;
+	border-radius: 8px;
+
+}
+
+.buttons{
+	margin-left: 120px;
+	text-align: left;
+	margin-bottom: 5px;
+}

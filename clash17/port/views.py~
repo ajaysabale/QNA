@@ -1,0 +1,64 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login,logout
+from port.models import Users,Question
+
+# Create your views here.
+
+def home(request):
+	return render(request,'loginpage.html')
+
+def signup(request):
+	if request.method=="POST":
+		username = request.POST['username']
+		password = request.POST['password']
+		user = User.objects.create_user(username = username, password = password)
+		user = authenticate(username=username,password=password)
+		if user is not None:
+			login(request,user)
+			user1 = Users.objects.create(username = username, password = password, user = user)
+			user1.save()
+			return render(request, 'questionpage.html')
+		else:
+			return render(request,'loginpage.html',{'message':'Caanot be authenticated!'})
+
+def log_in(request):
+	if request.method=="POST":	
+		username = request.POST['username1']
+		password = request.POST['password1']
+		user = authenticate(username=username,password=password)
+		if user is not None:
+			login(request,user)
+			return render(request, 'questionpage.html')
+		else:
+			return render(request, 'loginpage.html',{'message':'User is not registered!'})
+
+def log_out(request):
+	if request.user.is_authenticated():
+		logout(request)
+		return render(request, 'loginpage.html', {'message':'Logged out!'})
+
+
+def leaderboard(request):
+	if request.user.is_authenticated():
+		q = Users.objects.order_by('-q_no')
+		return render(request, 'upvote.html', { 'q':q })
+
+def questions(request):
+	if request.user.is_authenticated():
+		return render(request,'questionpage.html')
+
+def submit(request):
+	if request.user.is_authenticated():
+		return render(request, 'questionpage.html',{'message':'Submitted!'})
+
+def qlist(request):
+
+		
+
+
+
+
+
+		

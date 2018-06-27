@@ -1,0 +1,19 @@
+from django.db import models
+from django.contrib.auth.models import User
+# Create your models here.
+
+class Users(models.Model):
+	username=models.CharField(max_length=50,null=False,blank=False)
+	password=models.CharField(max_length=50,null=False,blank=False)
+	q_no=models.IntegerField(default=0)
+	user=models.OneToOneField(User)
+
+class Question(models.Model):
+	flag=models.BooleanField(default=0)
+	question_text=models.CharField(max_length=5000)
+	op1 = models.CharField(max_length=200)
+	op2 = models.CharField(max_length=200)
+	op3 = models.CharField(max_length=200)
+	op4 = models.CharField(max_length=200)
+	correct_ans=models.IntegerField(default=0)
+	question = models.ForeignKey(Users,default=0)
